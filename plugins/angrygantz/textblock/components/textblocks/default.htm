@@ -1,0 +1,15 @@
+
+{% for textblock in textblocks.getBlocks %} 
+{% set t="<b>sdfsdf</b>sdfsdf" %}
+<div class="col-md-4">
+    <span class="fa-stack fa-4x">
+        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+        <i class="fa {{ textblock.ico }} fa-stack-1x fa-inverse"></i>
+    </span>
+    <h4 class="service-heading">{{ textblock.title }}</h4>
+    <p class="text-muted">{{ textblock.text|raw }}</p>
+
+
+</div>
+{% endfor %}
+

@@ -1,0 +1,4 @@
+1.0.1:
+  - First version of portfolio
+  - Run table migrations
+  - create_projects_table.php

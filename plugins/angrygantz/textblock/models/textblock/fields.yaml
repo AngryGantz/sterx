@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    title:
+        label: Заголовок
+    ico:
+        label: angrygantz.textblock::lang.ico_form
+    text:
+        label: Содержание
+        type: richeditor 
+

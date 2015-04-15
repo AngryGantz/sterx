@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Text Block
+
+# Model Form Field configuration
+form: $/angrygantz/textblock/models/textblock/fields.yaml
+
+# Model Class name
+modelClass: Angrygantz\Textblock\Models\TextBlock
+
+# Default redirect location
+defaultRedirect: angrygantz/textblock/textblocks
+
+# Create page
+create:
+    title: Создние Блока
+    redirect: angrygantz/textblock/textblocks/update/:id
+    redirectClose: angrygantz/textblock/textblocks
+
+# Update page
+update:
+    title: Редактирование Блока
+    redirect: angrygantz/textblock/textblocks
+    redirectClose: angrygantz/textblock/textblocks
+
+# Preview page
+preview:
+    title: Preview Text Block

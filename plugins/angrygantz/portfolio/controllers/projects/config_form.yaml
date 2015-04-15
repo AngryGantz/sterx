@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/angrygantz/portfolio/models/project/fields.yaml
+
+# Model Class name
+modelClass: Angrygantz\Portfolio\Models\Project
+
+# Default redirect location
+defaultRedirect: angrygantz/portfolio/projects
+
+# Create page
+create:
+    title: Create Project
+    redirect: angrygantz/portfolio/projects/update/:id
+    redirectClose: angrygantz/portfolio/projects
+
+# Update page
+update:
+    title: Edit Project
+    redirect: angrygantz/portfolio/projects
+    redirectClose: angrygantz/portfolio/projects
+
+# Preview page
+preview:
+    title: Preview Project

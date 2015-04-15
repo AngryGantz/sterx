@@ -1,0 +1,35 @@
+description = "Portfolio Page"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Примеры работ</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+        </div>
+    </div>
+    <div class="row">
+        {% for project in projects.getForHome %} 
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal{{ project.id }}" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img src="{{ project.attachments.0.path }}" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>{{ project.title }}</h4>
+                <p class="text-muted">{{ project.type }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="portfolio" title=""><button type="button" class="btn btn-primary btn-xl">
+                    Всё портфолио
+                </button></a>
+            </div>
+        </div>
+    </div>
+</div>

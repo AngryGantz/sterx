@@ -1,0 +1,4 @@
+1.0.1: 
+  - First version of textblock
+  - Run table migrations
+  - create_text_blocks_table.php

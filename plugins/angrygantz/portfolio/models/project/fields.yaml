@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    title:
+        label: Заголовок
+    type:
+        label: Вид проекта
+    url:
+        label: URL проекта
+    note:
+        label: Аннотация
+    showhome:
+        label: Отображать на главной?
+        type: checkbox
+        default: false
+    description:
+        label: Описание
+        type:  richeditor #стандартный wysiwyg редактор
+    attachments:
+        label: angrygantz.portfolio::lang.form.photo_description
+        type:  fileupload

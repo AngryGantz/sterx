@@ -1,0 +1,42 @@
+description = "Modals"
+==
+{% for project in projects.getForHome %} 
+<div class="portfolio-modal modal fade" id="portfolioModal{{ project.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <!-- Project Details Go Here -->
+                        <h2>{{ project.title }}</h2>
+                        <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                        {% if (project.url!='')  %}
+                            <p class="item-intro text-muted">URL проекта: {{ project.url }}</p>
+                        {% endif %}
+                        <img class="img-responsive" src="{{ project.attachments.1.path }}" alt="">
+                        {{ project.description|raw }}
+<!--                         <ul class="list-inline">
+                            <li>Date: July 2014</li>
+                            <li>Client: Round Icons</li>
+                            <li>Category: {{ project.type }}</li>
+                        </ul>
+ -->                    
+                        {% for attachment in project.attachments %}
+                            {% if (loop.index0 > 1) %}
+                                <img class="img-responsive" src="{{ attachment.path }}" alt="">
+                            {% endif %}
+                        {% endfor %}
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Закрыть проект</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

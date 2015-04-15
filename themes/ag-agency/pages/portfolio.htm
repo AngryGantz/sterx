@@ -1,0 +1,37 @@
+title = "Мои проекты"
+url = "/portfolio"
+layout = "inside"
+hidden = "0"
+
+[projects]
+==
+function onRequestProjects(){
+
+	 $this['type'] = post('type');
+}
+==
+ <!-- Portfolio Section -->
+ <section id="portfolio" class="bg-light-gray">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Портфолио</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <ul class="portfoliomenu">
+	        	<li>
+		            <a  data-request="onRequestProjects" data-request-update="portfolioinside: '#result'" href=""  	data-request-data="type: ''">Все</a>
+				</li>
+	            {% for project in projects.getTypes %} 
+	            	<li>
+			            <a  data-request="onRequestProjects" data-request-update="portfolioinside: '#result'" href=""  	data-request-data="type: '{{ project.type }}'">{{ project.type }}</a>
+		            </li>
+	            {% endfor %}
+			</ul>
+        </div>
+    </div>
+	<p>&nbsp;</p>
+	<div id="result">
+	  	{% partial "portfolioinside" type="" %}
+	</div>  	
+ </section>
+{% partial "portfolioinsidemodal" %}
+
